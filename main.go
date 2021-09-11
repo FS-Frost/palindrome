@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/FS-Frost/palindromo/palindrome"
+	"github.com/FS-Frost/palindrome/palindrome"
 )
 
 func main() {
