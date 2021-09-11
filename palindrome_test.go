@@ -15,6 +15,7 @@ func TestIsPalindrome(t *testing.T) {
 	assert(t, "1221", true)
 	assert(t, "reconocer", true)
 	assert(t, "12322", false)
+	assertLongWord(t)
 }
 
 func assert(t *testing.T, input string, expected bool) {
@@ -23,4 +24,14 @@ func assert(t *testing.T, input string, expected bool) {
 	if actual != expected {
 		t.Errorf("[%s is palindrome] Should be %t", input, expected)
 	}
+}
+
+func assertLongWord(t *testing.T) {
+	input := ""
+	n := 1000
+
+	for i := 0; i < n; i++ {
+		input += "a"
+	}
+	assert(t, input, true)
 }
