@@ -1,6 +1,8 @@
 package palindrome
 
-import "fmt"
+const (
+	CODE_SPACE byte = 32
+)
 
 func IsPalindrome(input string) bool {
 	length := len(input)
@@ -23,8 +25,15 @@ func IsPalindrome(input string) bool {
 		left = input[leftIndex]
 		right = input[rightIndex]
 
-		checkForSpace(left, leftIndex)
-		checkForSpace(right, rightIndex)
+		if isSpace(left) {
+			leftIndex++
+			continue
+		}
+
+		if isSpace(right) {
+			rightIndex--
+			continue
+		}
 
 		if left != right {
 			result = false
@@ -38,10 +47,6 @@ func IsPalindrome(input string) bool {
 	return result
 }
 
-func checkForSpace(b byte, pos int) {
-	var spaceCode byte = 32
-	if b == spaceCode {
-		msg := fmt.Sprintf("only words allowed, space detected at column %d", pos)
-		panic(msg)
-	}
+func isSpace(b byte) bool {
+	return b == CODE_SPACE
 }

@@ -8,7 +8,7 @@ func TestIsPalindrome(t *testing.T) {
 	assert(t, "oso", true)
 	assert(t, "dabalearrozalazorraelabad", true)
 	assert(t, "ataralarata", true)
-	assert(t, "amoraroma", true)
+	assert(t, "amor a roma", true)
 	assert(t, "vacío", false)
 	assert(t, "a", true)
 	assert(t, "12321", true)
