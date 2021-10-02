@@ -6,6 +6,7 @@ func TestIsPalindrome(t *testing.T) {
 	assert(t, "palíndromo", false)
 	assert(t, "casa", false)
 	assert(t, "oso", true)
+	assert(t, "Oso", true)
 	assert(t, "dabalearrozalazorraelabad", true)
 	assert(t, "ataralarata", true)
 	assert(t, "amor a roma", true)

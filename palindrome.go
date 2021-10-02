@@ -1,5 +1,7 @@
 package palindrome
 
+import "strings"
+
 const (
 	CODE_SPACE byte = 32
 )
@@ -11,6 +13,7 @@ func IsPalindrome(input string) bool {
 		return true
 	}
 
+	input = strings.ToLower(input)
 	leftIndex := 0
 	rightIndex := length - 1
 	result := true
